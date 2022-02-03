@@ -1,10 +1,10 @@
 import { List } from "./Contacts.styled";
 import PropTypes from "prop-types";
 
-export default function Contacts({ filter, deleteElem }) {
+export default function Contacts({ filteredContacts, deleteElem }) {
   return (
     <List>
-      {filter.map((contact) => {
+      {filteredContacts.map((contact) => {
         return (
           <li key={contact.id}>
             <p>
@@ -22,7 +22,7 @@ export default function Contacts({ filter, deleteElem }) {
 }
 
 Contacts.protoTypes = {
-  filter: PropTypes.arrayOf(
+  filteredContacts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,

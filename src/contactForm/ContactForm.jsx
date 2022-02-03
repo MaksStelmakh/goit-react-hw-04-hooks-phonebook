@@ -15,6 +15,8 @@ export default function ContactForm({ onSubmit }) {
       setName(value);
     } else if (name === "number") {
       setNumber(value);
+    } else {
+      alert(`Something wrong`);
     }
   };
 

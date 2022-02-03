@@ -63,7 +63,10 @@ export default function App() {
         <h2>Contacts</h2>
         <Filter value={filter} change={searchMethod} />
         {contacts.length > 0 ? (
-          <Contacts filter={getVisibleContacts()} deleteElem={deleteContact} />
+          <Contacts
+            filteredContacts={getVisibleContacts()}
+            deleteElem={deleteContact}
+          />
         ) : (
           <h2>Your Phonebook is empty!</h2>
         )}
